@@ -6,8 +6,17 @@ function App() {
     let [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
 
     try {
-      const id = getId({ url: tab?.url });
-      chrome.tabs.create({ url: `https://yt-no-ads.vercel.app/play?id=${id}` });
+      const id: string = getId({ url: tab?.url });
+      // create a new tab
+      // chrome.tabs.create({ url: `https://yt-no-ads.vercel.app/play?id=${id}` });
+
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id! },
+        func: (id) => {
+          window.location.href = `https://yt-no-ads.vercel.app/play?id=${id}`;
+        },
+        args: [id],
+      });
     } catch (error) {
       console.error(error);
     }
