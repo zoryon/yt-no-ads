@@ -8,7 +8,7 @@ function App() {
     try {
       const id: string = getId({ url: tab?.url });
       // create a new tab
-      chrome.tabs.create({ url: `https://yt-no-ads.vercel.app/play?id=${id}` });
+      // chrome.tabs.create({ url: `https://yt-no-ads.vercel.app/play?id=${id}` });
 
       chrome.scripting.executeScript({
         target: { tabId: tab.id! },
