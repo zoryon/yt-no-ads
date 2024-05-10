@@ -17,7 +17,10 @@ npm run build
 You should now have a /dist folder with manifest.json,
 an html file and a bunh of other things as well. <br/>
 
-Now head to ### chrome://extensions/ ###  <br/>
-Hit the ### Developer mode ### button <br/>
-Hit the ### load unpacked extension ### button <br/>
-Upload the /dist folder and you should be fine to go <br/>
+Now head to
+```js
+chrome://extensions/
+```
+Hit the ### Developer mode ### button <br/><br/>
+Hit the ### load unpacked extension ### button <br/><br/>
+Upload the /dist folder and you should be fine to go <br/><br/>
