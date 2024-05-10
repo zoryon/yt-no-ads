@@ -4,7 +4,7 @@ This project aims to utilize YouTube with no ads
 
 ## How to use the actual extension
 
-First, install te npm modules
+First, install the npm modules
 ```js
 npm i 
 ```
